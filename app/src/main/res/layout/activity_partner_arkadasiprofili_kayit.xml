@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <!-- CardView: Email Girişi -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/emailEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email adresini girin"
+                    android:inputType="textEmailAddress"
+                    android:padding="12dp"
+                    android:background="@drawable/edit_text_background"
+                    android:layout_marginBottom="8dp"/>
+
+                <Button
+                    android:id="@+id/fetchButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Partnerini Ekle"
+                    android:backgroundTint="#3F51B5"
+                    android:textColor="#FFFFFF"
+                    android:padding="12dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView: Partner Bilgileri -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/resultCardView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:orientation="vertical">
+
+                <!-- Partner Fotoğrafı -->
+                <ImageView
+                    android:id="@+id/partner_image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/logo_circle"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="16dp"
+                    android:scaleType="centerCrop"
+                  />
+
+                <!-- Bilgi Satırı: Adı -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/isim20"
+                        android:contentDescription="Adı"
+                        android:layout_marginEnd="8dp"/>
+
+                    <TextView
+                        android:id="@+id/partner_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Adı: "
+                        android:textSize="18sp"
+                        android:textColor="#333333"/>
+                </LinearLayout>
+
+                <!-- Bilgi Satırı: Kullanıcı Adı -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/kullanici20"
+                        android:contentDescription="Kullanıcı Adı"
+                        android:layout_marginEnd="8dp"/>
+
+                    <TextView
+                        android:id="@+id/partner_username"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Kullanıcı Adı: "
+                        android:textSize="18sp"
+                        android:textColor="#333333"/>
+                </LinearLayout>
+
+                <!-- Bilgi Satırı: Email -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/mail21"
+                        android:contentDescription="Email"
+                        android:layout_marginEnd="8dp"/>
+
+                    <TextView
+                        android:id="@+id/partner_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Email: "
+                        android:textSize="18sp"
+                        android:textColor="#333333"/>
+                </LinearLayout>
+
+                <!-- Bilgi Satırı: Telefon -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/telefon20"
+                        android:contentDescription="Telefon"
+                        android:layout_marginEnd="8dp"/>
+
+                    <TextView
+                        android:id="@+id/partner_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Telefon: "
+                        android:textSize="18sp"
+                        android:textColor="#333333"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:id="@+id/partner_btid"></TextView>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+</ScrollView>

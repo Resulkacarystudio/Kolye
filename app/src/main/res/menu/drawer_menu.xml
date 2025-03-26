@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/bta1"
+        android:title="Home"/>
+    <item
+        android:id="@+id/nav_plants"
+        android:icon="@drawable/bt_menu_2"
+        android:title="Plants"/>
+    <!-- Diğer menü öğeleri buraya eklenebilir -->
+</menu>

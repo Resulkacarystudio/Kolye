@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Alt gradient katmanı -->
+    <item>
+        <shape>
+            <gradient
+                android:angle="135"
+                android:startColor="#141414"
+            android:centerColor="#323232"
+            android:endColor="#646464"
+            android:type="linear"/>
+        </shape>
+    </item>
+
+    <!-- Kabartma efekti -->
+    <item>
+        <shape>
+            <solid android:color="#141414" />
+            <corners android:radius="0dp"/>
+            <stroke android:width="0dp" android:color="#323232"/>
+        </shape>
+    </item>
+</layer-list>

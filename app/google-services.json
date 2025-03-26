@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "650450753089",
+    "project_id": "kolye-15638",
+    "storage_bucket": "kolye-15638.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:650450753089:android:0ea75940908026d33058c0",
+        "android_client_info": {
+          "package_name": "com.example.greenlove"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsMqXVdMf5ac9rHUdT7qsCoAcY6HoSXSA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

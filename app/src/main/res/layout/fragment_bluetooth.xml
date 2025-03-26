@@ -1,0 +1,2223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".bluetoothFragment"
+    android:background="@color/accent_color"
+
+    android:elevation="4dp"
+
+    >
+
+    <Button
+        android:id="@+id/kolyearkadasi_eklebt"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:drawableLeft="@drawable/kadi_asset"
+        android:text="Kolyeni Arkadaşınla Eşle"
+        android:textSize="25sp"
+        android:layout_marginTop="20dp"
+        android:padding="16dp"
+        android:layout_gravity="center" />
+
+    <!-- İçerik alanı: GridLayout ve diğer içerikler -->
+    <LinearLayout
+        android:id="@+id/fulllayout"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_margin="0dp"
+        android:background="@drawable/bg004"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            app:cardBackgroundColor="@color/white"
+            android:layout_gravity="center"
+            android:foregroundGravity="center"
+            android:elevation="0dp"
+            app:cardCornerRadius="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00796B"
+                android:layout_gravity="center"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <!-- Turquoise Yazısı -->
+                <TextView
+                    android:id="@+id/center_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="ᴛᴜʀǫᴜᴏɪsᴇ"
+                    android:gravity="center"
+                    android:layout_marginLeft="30dp"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:foregroundGravity="center"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium" />
+
+                <!-- Sağdaki Resimli Buton -->
+                <ImageButton
+                    android:id="@+id/right_button"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/menu_asset"
+                    android:background="?attr/selectableItemBackground"
+                    android:scaleType="centerInside"
+                    android:contentDescription="Sağ buton" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:orientation="vertical">
+
+            <!-- Profil Kartı -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="10dp"
+                android:alpha="0.9"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:id="@+id/profile_git_Linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- Sol Taraf: Kendi Profil Bilgileri -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal">
+
+                            <!-- Kendi Profil Fotoğrafı -->
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/profilfoto"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@drawable/profilfotokullanici"
+                                android:scaleType="centerCrop"
+                                app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.LargeComponent"
+                                android:layout_marginBottom="8dp" />
+
+                            <!-- Kendi İsim -->
+                            <TextView
+                                android:id="@+id/profilisim"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sizin İsminiz"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:layout_marginBottom="4dp" />
+
+                            <!-- Kendi Email -->
+                            <TextView
+                                android:id="@+id/profilemail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="sizin.email@gmail.com"
+                                android:textColor="@color/gray"
+                                android:textStyle="bold"
+                                android:textSize="12sp"
+                                android:gravity="center" />
+
+                        </LinearLayout>
+
+                        <!-- Ortadaki Ayırıcı Çizgi -->
+                        <View
+                            android:id="@+id/main_ayrac"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="#E0E0E0"
+                            android:layout_marginHorizontal="12dp" />
+
+                        <!-- Sağ Taraf: Partner Profil Bilgileri -->
+                        <LinearLayout
+                            android:id="@+id/main_sagpartner"
+                            android:layout_width="0dp"
+                            android:visibility="visible"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal">
+
+                            <!-- Partner Profil Fotoğrafı -->
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/kolyearkadasi_profil_image"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:scaleType="centerCrop"
+                                app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.LargeComponent"
+                                android:layout_marginBottom="8dp" />
+
+                            <!-- Partner İsim -->
+                            <TextView
+                                android:id="@+id/kolyearkadasiisim_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Partner İsmi"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:layout_marginBottom="4dp" />
+
+                            <!-- Partner Email -->
+                            <TextView
+                                android:id="@+id/kolyekarkadasiemail_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:text="partner.email@gmail.com"
+                                android:textColor="@color/gray"
+                                android:textSize="12sp"
+                                android:gravity="center" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- Yeni LinearLayout (Buton Görünümlü Kartlar) -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:padding="8dp">
+
+                        <!-- Partner Bilgileri -->
+                        <LinearLayout
+                            android:id="@+id/partner_bilgileri_cardview"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:padding="12dp"
+                            android:background="@drawable/rounded_gradient_accent"
+                            android:elevation="2dp"
+                            android:layout_marginEnd="8dp">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/ekle"
+                                android:layout_marginBottom="8dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Partner Bilgileri"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                android:gravity="center" />
+
+                        </LinearLayout>
+
+                        <!-- Kolyeye Bağlan -->
+                        <LinearLayout
+                            android:id="@+id/kolyeye_baglan_cardview"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:padding="12dp"
+                            android:background="@drawable/rounded_gradient_blue"
+                            android:elevation="2dp"
+                            android:layout_marginEnd="8dp">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/bt_menu_1"
+                                android:layout_marginBottom="8dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Kolyeye Bağlan"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                android:gravity="center" />
+
+                        </LinearLayout>
+
+                        <!-- Titreşim Gönder -->
+                        <LinearLayout
+                            android:id="@+id/titresim_gonder"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:padding="12dp"
+                            android:background="@drawable/rounded_gradient_yellow"
+                            android:elevation="2dp">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/titresim_assset"
+                                android:layout_marginBottom="8dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Titreşim Gönder"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                android:gravity="center" />
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="bağlan"
+                        android:id="@+id/bir"
+
+                        ></Button>
+                    <Button
+                        android:id="@+id/btn_pin_25"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Yak 25. Pin" />
+
+                    <Button
+                        android:id="@+id/btn_pin_27"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Yak 27. Pin" />
+
+                    <Button
+                        android:id="@+id/btn_pin_31"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Yak 31. Pin" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="start"
+                        android:visibility="gone"
+                        android:padding="16dp">
+
+                        <!-- Şarj Durumu -->
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/circle_progress_card"
+                            android:layout_width="140dp"
+                            android:layout_height="140dp"
+                            android:layout_margin="8dp"
+                            app:cardCornerRadius="70dp"
+                            app:cardElevation="6dp"
+                            android:gravity="center">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center">
+
+                                <!-- Circular Progress -->
+                                <ProgressBar
+                                    android:id="@+id/circular_progress"
+                                    style="?android:attr/progressBarStyleHorizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:indeterminateOnly="false"
+                                    android:max="100"
+                                    android:progress="75"
+                                    android:progressDrawable="@drawable/circular_progress_drawable"
+                                    android:rotation="270" />
+
+                                <!-- Percentage Text -->
+                                <TextView
+                                    android:id="@+id/progress_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="75%"
+                                    android:textColor="#1976D2"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+
+                                <!-- Storage Info -->
+                                <TextView
+                                    android:id="@+id/storage_info_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginBottom="12dp"
+                                    android:text="1.37GB/12.63GB"
+                                    android:textColor="#7E1B1B"
+                                    android:textSize="12sp" />
+                            </RelativeLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <!-- Durum Göstergeleri -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_marginStart="16dp"
+                            android:gravity="center_vertical"
+                            android:padding="8dp">
+
+                            <!-- Bluetooth Durumu -->
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="4dp"
+                                android:layout_marginBottom="8dp"
+                                android:padding="8dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:gravity="center_vertical">
+
+                                    <ImageView
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:src="@drawable/email_asset1"
+                                        android:tint="@color/green" />
+
+                                    <TextView
+                                        android:id="@+id/bluetooth_status"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:text="Bluetooth: Açık"
+                                        android:textSize="14sp"
+                                        android:textColor="@android:color/black" />
+                                </LinearLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <!-- Konum Durumu -->
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="4dp"
+                                android:layout_marginBottom="8dp"
+                                android:padding="8dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:gravity="center_vertical">
+
+                                    <ImageView
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:src="@drawable/email_asset1"
+                                        android:tint="@color/green" />
+
+                                    <TextView
+                                        android:id="@+id/location_status"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:text="Konum: Açık"
+                                        android:textSize="14sp"
+                                        android:textColor="@android:color/black" />
+                                </LinearLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <!-- Kolye Bağlantı Durumu -->
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="4dp"
+                                android:padding="8dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:gravity="center_vertical">
+
+                                    <ImageView
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:src="@drawable/email_asset1"
+                                        android:tint="@color/red" />
+
+                                    <TextView
+                                        android:id="@+id/necklace_status"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:text="Kolye: Bağlı Değil"
+                                        android:textSize="14sp"
+                                        android:textColor="@android:color/black" />
+                                </LinearLayout>
+                            </com.google.android.material.card.MaterialCardView>
+                        </LinearLayout>
+
+                </LinearLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+
+
+
+
+        <!-- Ana Profil CardView -->
+
+        <!-- Yeni CardView Düzeni -->
+
+        <!-- Titreşim Gönder Kartı -->
+
+
+
+
+
+            <!-- Kartlar için Yatay Satır -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_margin="5dp"
+                android:padding="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal">
+
+                    <!-- Partner Bilgileri Kartı -->
+                    <LinearLayout
+                        android:id="@+id/partner_bilgileri_cardview1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_gradient_accent"
+                        android:orientation="vertical"
+                        android:padding="12dp"
+                        android:gravity="center_horizontal"
+                        android:elevation="1dp"
+                        android:layout_marginEnd="0dp">
+
+                        <!-- Partner İkonu -->
+                        <ImageView
+                            android:id="@+id/partner_icon"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ekle"
+                            android:layout_marginBottom="8dp"
+                            android:tint="@color/background_color" />
+
+                        <!-- Partner Bilgileri Başlık -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Partner Bilgileri"
+                            android:textSize="19sp"
+                            android:textStyle="bold"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:layout_marginBottom="4dp" />
+
+                        <!-- Ayrıntı Metni -->
+                        <TextView
+                            android:id="@+id/partner_details_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible"
+                            android:text="Partner buradan eklenir."
+                            android:textSize="12sp"
+                            android:textAlignment="center"
+                            android:textColor="@color/background_color"
+                            android:layout_marginTop="8dp" />
+                    </LinearLayout>
+
+                    <!-- Kolyeye Bağlan Kartı -->
+                    <LinearLayout
+                        android:id="@+id/kolyeye_baglan_cardview1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_gradient_blue"
+                        android:orientation="vertical"
+                        android:padding="12dp"
+                        android:gravity="center_horizontal"
+                        android:elevation="1dp"
+                        android:layout_marginStart="0dp">
+
+                        <!-- Bluetooth İkonu -->
+                        <ImageView
+                            android:id="@+id/bluetooth_icon"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/bt_menu_1"
+                            android:layout_marginBottom="8dp"
+                            android:tint="@color/background_color" />
+
+                        <!-- Kolyeye Bağlan Başlık -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Kolyeye Bağlan"
+                            android:textAlignment="center"
+                            android:textSize="19sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:layout_marginBottom="4dp" />
+
+                        <!-- Açıklama -->
+                        <TextView
+                            android:id="@+id/connect_necklace_description"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible"
+                            android:text="Bluetooth ile kolyeye bağlantı sağlanır."
+                            android:textSize="12sp"
+                            android:textColor="@color/background_color"
+                            android:gravity="center"
+                            android:layout_marginTop="8dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/titresim_gonder1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:background="@drawable/rounded_gradient_yellow"
+
+                        android:visibility="visible"
+                        android:padding="16dp"
+                        android:gravity="center_horizontal"
+                        android:layout_marginStart="0dp">
+
+                        <ImageView
+                            android:id="@+id/vibration_icon"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/titresim"
+                            android:layout_marginBottom="8dp" />
+
+                        <TextView
+                            android:id="@+id/vibration_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+
+                            android:text="Titreşim Gönder"
+                            android:textSize="19sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:layout_marginBottom="4dp" />
+
+                        <TextView
+                            android:id="@+id/vibration_description"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible"
+                            android:text="Partnerine titreşim gönderir."
+                            android:textSize="12sp"
+                            android:textColor="@color/white"
+                            android:gravity="center" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:background="#00796B"
+                    >
+
+                    <!-- Günlük Mesaj Başlığı -->
+                    <TextView
+                        android:id="@+id/daily_message_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        android:text="Partnerinizin Günlük Mesajı"
+                        android:textSize="18sp"
+                        android:layout_marginTop="20dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:paddingBottom="8dp" />
+
+                    <!-- Günlük Mesaj -->
+                    <TextView
+                        android:id="@+id/daily_message"
+                        android:layout_width="match_parent"
+                        android:visibility="visible"
+
+                        android:layout_margin="4dp"
+                        android:layout_height="match_parent"
+                        android:text="Bugün çok güzel bir gün, seni seviyorum! Hayatımın her anını daha anlamlı ve güzel kıldığın için minnettarım. Seninle geçirdiğim her saniye, kalbimde unutulmaz bir yer ediyor. Seni her şeyden çok seviyorum ve birlikte geçireceğimiz güzel günlerin hayalini kuruyorum!"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:background="@drawable/message_background" />
+
+                    <!-- Mesaj Butonları -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="visible"
+                        android:layout_margin="3dp"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/send_message_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:layout_weight="1"
+                            android:text="Mesaj Yaz"
+                            android:backgroundTint="#FFFFFF"
+
+                            android:padding="8dp"
+                            android:textSize="10sp"
+                            android:textColor="@color/black" />
+
+                        <Button
+                            android:id="@+id/view_sent_message_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Gönderilen Mesajları Oku"
+                            android:textSize="10sp"
+                            android:backgroundTint="#FFFFFF"
+
+                            android:padding="8dp"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        <!-- Titreşim Gönder Kartı -->
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background_light"
+
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <!-- Üst Alan: Kullanıcı ve Partner -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="16dp"
+                    android:visibility="gone"
+                    android:gravity="center_vertical">
+
+                    <!-- Kullanıcı Bilgileri -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/user_image"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/logo_circle" />
+
+                        <TextView
+                            android:id="@+id/kullanici_ismi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Kullanıcı İsmi"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="8dp" />
+                    </LinearLayout>
+
+                    <!-- Partner Bilgileri -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/partner_image"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/logo_circle" />
+
+                        <TextView
+                            android:id="@+id/partner_ismi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Partner İsmi"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="8dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- İlişki Tarihi -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/relationship_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="İlişki Başlangıcı: 12.02.2020"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:paddingBottom="8dp" />
+
+                    <Button
+                        android:id="@+id/set_relationship_date_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tarihi Ayarla"
+                        android:textSize="10sp"
+                        android:padding="8dp"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <ProgressBar
+            android:id="@+id/battery_progress"
+            android:layout_width="100dp"
+            android:visibility="gone"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:indeterminate="false"
+            android:progressDrawable="@drawable/custom_progress"
+            android:max="100"
+            android:progress="0" />
+
+
+
+    </LinearLayout>
+
+
+
+
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_margin="0dp"
+        android:padding="10dp"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="2"
+        android:rowCount="2"
+        android:layout_gravity="center"
+        android:foregroundGravity="center">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/hucre_1"
+            app:cardCornerRadius="10dp"
+            android:layout_marginBottom="5dp"
+
+            android:layout_width="0dp"
+            android:layout_marginRight="5dp"
+            android:layout_height="0dp"
+
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="0"
+            android:layout_column="0"
+            >
+
+            <ImageView
+                android:padding="5dp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/bt_menu_1"
+                android:layout_gravity="top|center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="Bluetooth Bağlantısı"
+                android:layout_gravity="bottom"
+                android:textColor="@color/white"
+                android:layout_marginBottom="70dp"
+                android:textAlignment="center" />
+
+            <!-- Yeni Açıklama TextView -->
+            <TextView
+                android:id="@+id/subText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:text="Kolye Bağlantısı Burada\nYapılır"
+                android:layout_gravity="bottom"
+                android:textColor="@color/white"
+                android:layout_marginBottom="30dp"
+                android:textAlignment="center" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- 2nd Cell -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/hucre_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="5dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="0"
+            app:cardCornerRadius="10dp"
+
+            android:layout_column="1"
+            android:backgroundTint="@color/card_opacity_white"
+            >
+
+            <ImageView
+                android:padding="5dp"
+
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/titresim_assset"
+                android:layout_gravity="top|center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="Titreşim Gönder"
+                android:layout_gravity="bottom"
+                android:textColor="@color/white"
+                android:layout_marginBottom="70dp"
+                android:textAlignment="center" />
+
+            <!-- Yeni Açıklama TextView -->
+            <TextView
+                android:id="@+id/titresimAciklama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:text="Kolye Arkadaşına Titreşim\nGönder"
+                android:layout_gravity="bottom"
+                android:textColor="@color/white"
+                android:layout_marginBottom="30dp"
+                android:textAlignment="center" />
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- 3rd Cell -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/hucre_3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            app:cardCornerRadius="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_rowWeight="1"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:backgroundTint="@color/card_opacity_white"
+            >
+
+            <ImageView
+                android:padding="5dp"
+
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/menu_zaman_1"
+                android:layout_gravity="top|center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="Kolye Arkadaşı Bilgileri"
+                android:layout_gravity="bottom"
+                android:textColor="@color/white"
+                android:layout_marginBottom="70dp"
+                android:textAlignment="center" />
+
+            <!-- Yeni Açıklama TextView -->
+            <TextView
+                android:id="@+id/kolyeArkadasiBilgiAciklama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="Kolye Arkadaşının Bilgileri Burada\nYer Alır"
+                android:layout_gravity="bottom"
+                android:textColor="@color/white"
+                android:layout_marginBottom="30dp"
+                android:textAlignment="center" />
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- 4th Cell -->
+        <!-- 4th Cell -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/hucre_4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:cardCornerRadius="10dp"
+
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:backgroundTint="@color/card_opacity_white"
+            >
+
+            <ImageView
+                android:padding="5dp"
+
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/settings_asset"
+                android:layout_gravity="top|center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="Kullanıcı Bilgileri"
+                android:layout_gravity="bottom"
+                android:textColor="@color/white"
+                android:layout_marginBottom="70dp"
+                android:textAlignment="center" />
+
+            <!-- Yeni Açıklama TextView -->
+            <TextView
+                android:id="@+id/kullaniciBilgiAciklama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:text="Kullanıcının Bilgileri Burada\nYer Alır"
+                android:layout_gravity="bottom"
+                android:textColor="@color/white"
+                android:layout_marginBottom="30dp"
+                android:textAlignment="center" />
+        </androidx.cardview.widget.CardView>
+
+
+    </GridLayout>
+
+
+    <LinearLayout
+        android:id="@+id/bluetooth_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:background="#AA090909"
+        android:layout_margin="0dp"
+        >
+
+        <androidx.cardview.widget.CardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@color/white"
+            android:alpha="0.7">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/frame_2"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bluetooth"
+                    android:textSize="35sp"
+                    android:textAlignment="center"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="#2B2929"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/BluetoothOnnOff"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_gravity="center"
+                    android:src="@drawable/off"
+                    android:contentDescription="Bluetooth On/Off" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottieAnimationView"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:foregroundGravity="center"
+                    app:lottie_rawRes="@raw/bttttt"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:id="@+id/bluetooth_button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:text="Bluetooth Durumu"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textAlignment="center"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/frame_1"
+                        android:padding="12dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/bluetoothdurum_txt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAlignment="center"
+                        android:text="Bluetooth Durumu:"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:gravity="center"
+                        android:background="@drawable/frame_1"
+                        android:padding="12dp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="12dp"
+            android:layout_marginTop="10dp"
+            app:cardElevation="4dp"
+            android:visibility="gone"
+            android:padding="8dp"
+            android:backgroundTint="#66A8A5A5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp"
+                    android:id="@+id/liste"
+                    android:textColor="#F6E9E9"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bluetooth_kapali_layout"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:visibility="gone"
+            android:foregroundGravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/bluetooth_durumu_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:visibility="gone"
+                android:foregroundGravity="center"
+                android:textSize="25sp"
+                android:textColor="@color/white"
+                android:text="Lütfen Bluetooth'u Açınız"></TextView>
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/bildirimGonder_bt"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/kalp_button"
+            android:text=""
+            android:padding="0dp"
+            android:backgroundTint="@null"
+            android:elevation="4dp"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+
+
+
+
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleid"
+        android:visibility="gone"></EditText>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mesid"
+        android:visibility="gone"></EditText>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/kullanici_id"
+        android:layout_width="match_parent"
+        android:text="@string/kullanici_id_text"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:textColor="#FFF8F8"
+        android:textSize="15sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/frame_1"
+        android:textAlignment="textStart"
+        android:padding="5dp"
+        ></TextView>
+    <LinearLayout
+        android:id="@+id/kullanici_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/frame_3"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            app:srcCompat="@drawable/logocircle"
+            android:layout_gravity="center"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="40dp"
+            />
+        <TextView
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@+id/kullanici_idtxt"
+            android:layout_width="match_parent"
+            android:text="@string/kullanici_id_text1"
+            android:layout_height="wrap_content"
+            android:textColor="#FFF8F8"
+            android:textSize="35sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:textAlignment="textStart"
+            android:padding="5dp"
+            ></TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/kullanici_id_ic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:background="@drawable/table_row_background1"
+        android:gravity="top"
+        android:layout_gravity="center">
+
+        <TableRow
+            android:id="@+id/kolyearkadasi_table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/table_row_background1">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/kolyearkadasiekle_layout"
+                android:gravity="center_vertical">
+
+                <!-- Sol tarafta yer alan ikon için ImageView -->
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/mail21"
+                    android:layout_marginEnd="16dp"
+                    android:contentDescription="E-Mail simgesi" />
+
+                <!-- TextView ve EditText'i dikey hizalamak için LinearLayout -->
+
+                <!-- Üstte E-Mail Adresi TextView -->
+                <TextView
+                    android:id="@+id/email_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="E-Mail Adresi"
+                    android:textColor="#AAAAAA"
+                    android:textSize="14sp" />
+
+                <!-- E-Mail Adresi EditText -->
+                <EditText
+                    android:id="@+id/kullanici_arkadasi_ed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
+                    android:hint="Kolye Eşinin E-mail Adresini Giriniz."
+                    android:textSize="15sp"
+                    android:background="@drawable/table_row_background1"
+                    android:textStyle="bold|italic"/>
+            </LinearLayout>
+        </TableRow>
+
+        <!-- Butonun ayrı bir TableRow içinde yerleştirilmesi -->
+        <TableRow
+            android:id="@+id/kolyearkadasibutton_table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/table_row_background1"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp">
+
+            <Button
+                android:id="@+id/kolye_arkadasi_bt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="@drawable/frame_1"
+                android:textColorHint="@color/white"
+                android:drawableLeft="@drawable/ad_asset"
+                android:hint="Kolye Eşini Ara"
+                android:textSize="20sp"
+                android:textColor="@color/white" />
+        </TableRow>
+
+
+        <TextView
+            android:id="@+id/kullanici_arkadasi_tw"
+            android:layout_margin="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textStyle="bold|italic"
+            android:text="Lütfen Yukarıda Kolye Arkadaşınızın E-mail Adresini Yazıp Butona Basınız."></TextView>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/kolyearkadasi_bilgilericard"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="12dp"
+            android:visibility="gone"
+            app:cardElevation="6dp"
+            android:backgroundTint="#80000000"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="20dp"
+                    android:paddingLeft="20dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/kolyearkadasi_profil_image1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/kadi_asset"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/circle_background" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/kolyearkadasiisim_text1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Julia Roberts"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/kolyekarkadasiemail_text1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="email@example.com"
+                            android:textColor="@color/white"
+                            android:layout_marginTop="4dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="#40FFFFFF"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginTop="10dp">
+
+
+                    <Button
+                        android:id="@+id/kolyearkadasi_ekleTXT"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        android:textSize="9dp"
+                        android:text="Kolye Arkadaşın Kayıtlı"
+                        android:drawableLeft="@drawable/ad_asset"
+                        android:background="@drawable/rounded_button"
+                        android:textColor="@color/white"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp" />
+
+                    <Button
+                        android:id="@+id/kolyearkadasi_eklebtn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="9dp"
+                        android:text="Kolye Arkadaşını Ekle"
+                        android:drawableLeft="@drawable/ad_asset"
+                        android:background="@drawable/rounded_button"
+                        android:textColor="@color/white"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:id="@+id/kullanici_arkadasi_image"
+            android:visibility="gone"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/logo_circle"
+            android:layout_gravity="center"
+            android:foregroundGravity="top" />
+
+
+
+
+        <TableLayout
+            android:visibility="gone"
+            android:id="@+id/kullanici_bilgileri_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/table_row_background"
+            android:layout_marginTop="0dp"
+            android:stretchColumns="1">
+
+            <!-- Başlık -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="Kolye Arkadaşı Bilgileri"
+                android:layout_marginBottom="20dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#F1EFEF"
+                android:layout_gravity="center"
+                android:gravity="center" />
+
+            <!-- İsim -->
+            <TableRow
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/table_row_background1">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/isim20"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="İsim simgesi" />
+                <!-- TextView'leri üst üste koymak için LinearLayout kullandık -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/kullanici_isim_detay"
+                        android:textColor="#AAAAAA"
+                        android:textSize="14sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Kullanıcı İsmi" />
+                    <TextView
+                        android:id="@+id/kullanici_isim"
+                        android:textColor="#FFFFFF"
+                        android:textSize="17sp"
+
+                        android:textStyle="bold|italic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </TableRow>
+
+            <!-- Kullanıcı Adı -->
+            <TableRow
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/table_row_background1">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/kullanici20"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="Kullanıcı Adı simgesi" />
+                <!-- TextView'leri üst üste koymak için LinearLayout kullandık -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/kullanici_adi_detay"
+                        android:textColor="#AAAAAA"
+                        android:textSize="14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kullanıcı Adı" />
+                    <TextView
+                        android:id="@+id/kullanici_adi"
+                        android:textColor="#FFFFFF"
+                        android:textSize="17sp"
+                        android:textStyle="bold|italic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </TableRow>
+
+            <!-- Email -->
+            <TableRow
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/table_row_background1">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/mail21"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="Email simgesi" />
+                <!-- TextView'leri üst üste koymak için LinearLayout kullandık -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/kullanici_email_detay"
+                        android:textColor="#AAAAAA"
+                        android:textSize="14sp"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kullanıcı E-mail" />
+                    <TextView
+                        android:id="@+id/kullanici_email"
+                        android:textColor="#FFFFFF"
+                        android:textSize="17sp"
+
+                        android:textStyle="bold|italic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </TableRow>
+
+            <!-- Telefon -->
+            <TableRow
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/table_row_background1">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/telefon20"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="Telefon simgesi" />
+                <!-- TextView'leri üst üste koymak için LinearLayout kullandık -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/kullanici_telefon_detay1"
+                        android:textColor="#AAAAAA"
+                        android:textSize="14sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Telefon Numarası" />
+                    <TextView
+                        android:id="@+id/kullanici_telefon"
+                        android:textColor="#FFFFFF"
+                        android:textSize="17sp"
+                        android:textStyle="bold|italic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </TableRow>
+
+        </TableLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:id="@+id/kolye_arkadasi_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:background="@drawable/frame_1">
+
+        <ImageView
+            android:layout_marginTop="40dp"
+            android:id="@+id/kullanici_arkadasi_image1"
+            android:visibility="gone"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/logocircle"
+            android:layout_gravity="center"
+            android:foregroundGravity="center"></ImageView>
+        <TextView
+            android:id="@+id/kullanici_arkadasi_tw"
+            android:layout_margin="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:text="Lütfen Yukarıda Kolye Arkadaşınızın E-mail Adresini Yazıp Bulunuz"></TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/toket_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_margin="20dp"
+        android:background="@drawable/frame_1"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1.ALAN"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="5dp"></TextView>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tokenid2"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/frame_3"
+            android:visibility="gone"
+            android:padding="5dp"></TextView>
+        <Button
+            android:id="@+id/kullanici_id_bt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/frame_1"
+            android:text="Paylaş"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/white">
+
+        </Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/toket_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_margin="20dp"
+        android:background="@drawable/frame_1"
+
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2.ALAN"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="5dp"></TextView>
+
+        <EditText
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tokenid"
+            android:text="Lütfen Kolye Eşinizin Kolye Şifresini Girip Kaydet Butonuna Basınız."
+            android:textSize="15sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/frame_3"
+            android:padding="5dp"></EditText>
+        <Button
+            android:id="@+id/kullanici_idkaydet_bt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/frame_1"
+            android:text="KAYDET"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/black">
+
+        </Button>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/otorumlayout"
+        android:background="@drawable/table_row_background1"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/kullanici_bilgileri_card"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="12dp"
+            android:visibility="gone"
+            app:cardElevation="6dp"
+            android:backgroundTint="#80000000"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="20dp"
+                    android:paddingLeft="20dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/kullanici_profil_image"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/kadi_asset"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/circle_background" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/kullaniciisim_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Julia Roberts"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/kullaniciemail_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="email@example.com"
+                            android:textColor="@color/white"
+                            android:layout_marginTop="4dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="#40FFFFFF"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginTop="10dp">
+
+
+                    <Button
+                        android:id="@+id/kullanicibuton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        android:textSize="9dp"
+                        android:text="Kolye Arkadaşın Kayıtlı"
+                        android:drawableLeft="@drawable/ad_asset"
+                        android:background="@drawable/rounded_button"
+                        android:textColor="@color/white"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp" />
+
+                    <Button
+                        android:id="@+id/kullanicisilbutton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="9dp"
+                        android:text="Hesabımı Sil"
+                        android:drawableLeft="@drawable/ad_asset"
+                        android:background="@drawable/rounded_button"
+                        android:textColor="@color/white"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <TableLayout
+
+            android:visibility="visible"
+            android:id="@+id/kullanicibilgileri_table"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:background="@drawable/table_row_background"
+            android:layout_margin="5dp"
+            android:stretchColumns="1">
+            <!-- Başlık -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="Kullanıcı Bilgileri"
+                android:layout_marginBottom="20dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#F1EFEF"
+                android:layout_gravity="center"
+                android:gravity="center" />
+
+            <TableRow
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/table_row_background1">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/isim20"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="İsim simgesi" />
+                <!-- TextView'leri üst üste koymak için LinearLayout kullandık -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/kullanici_isim_detay1"
+                        android:textColor="#AAAAAA"
+                        android:textSize="14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kullanıcı İsmi" />
+                    <TextView
+                        android:id="@+id/oturumisim"
+                        android:textColor="#FFFFFF"
+                        android:textSize="17sp"
+                        android:textStyle="bold|italic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/table_row_background1">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/kullanici20"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="İsim simgesi" />
+                <!-- TextView'leri üst üste koymak için LinearLayout kullandık -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/kullanici_isim_detay2"
+                        android:textColor="#AAAAAA"
+                        android:textSize="14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kullanıcı Adı" />
+                    <TextView
+                        android:id="@+id/oturumkullaniciadi"
+                        android:textColor="#FFFFFF"
+                        android:textSize="17sp"
+                        android:textStyle="bold|italic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/table_row_background1">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/mail21"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="İsim simgesi" />
+                <!-- TextView'leri üst üste koymak için LinearLayout kullandık -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/kullanici_isim_detay3"
+                        android:textColor="#AAAAAA"
+                        android:textSize="14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kullanıcı E-mail" />
+                    <TextView
+                        android:id="@+id/oturumemail"
+                        android:textColor="#FFFFFF"
+                        android:textSize="17sp"
+                        android:textStyle="bold|italic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/table_row_background1">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/telefon20"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="İsim simgesi" />
+                <!-- TextView'leri üst üste koymak için LinearLayout kullandık -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/kullanici_isim_detay5"
+                        android:textColor="#AAAAAA"
+                        android:textSize="14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Telefon Numarası" />
+                    <TextView
+                        android:id="@+id/oturumtelefon"
+                        android:textColor="#FFFFFF"
+                        android:textSize="17sp"
+                        android:textStyle="bold|italic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/kolyearkadasitelefon_Text"></TextView>
+    <ImageView
+        android:id="@+id/center_logo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        android:src="@drawable/logocircle"
+        android:layout_gravity="center"
+        android:layout_margin="8dp" />
+
+</FrameLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/one_hour"
+        android:title="1 Saat" />
+    <item
+        android:id="@+id/one_day"
+        android:title="1 Gün" />
+    <item
+        android:id="@+id/three_days"
+        android:title="3 Gün" />
+    <item
+        android:id="@+id/one_week"
+        android:title="1 Hafta" />
+    <item
+        android:id="@+id/two_weeks"
+        android:title="2 Hafta" />
+    <item
+        android:id="@+id/one_month"
+        android:title="1 Ay" />
+    <item
+        android:id="@+id/three_months"
+        android:title="3 Ay" />
+    <item
+        android:id="@+id/six_months"
+        android:title="6 Ay" />
+    <item
+        android:id="@+id/one_year"
+        android:title="1 Yıl" />
+    <item
+        android:id="@+id/two_years"
+        android:title="2 Yıl" />
+    <item
+        android:id="@+id/four_years"
+        android:title="4 Yıl" />
+    <item
+        android:id="@+id/five_years"
+        android:title="5 Yıl" />
+
+    <item
+        android:id="@+id/ten_years"
+        android:title="10 Yıl" />
+</menu>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".baslangic_activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/logo_circle"
+          />
+        <!-- Başlık -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="İzin Ayarları"
+            android:textSize="28sp"
+            android:textColor="@color/title_text_color"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Switch Bileşenlerini Gruplayan CardView -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardElevation="6dp"
+            app:cardCornerRadius="12dp"
+            app:cardBackgroundColor="@color/card_background_color">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Bluetooth İzni -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/bluetooth_label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Bluetooth İzni"
+                        android:textSize="18sp"
+                        android:textColor="@color/text_primary_color" />
+
+                    <Switch
+                        android:id="@+id/switchBluetooth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bu izin, uygulamanın BLE (Bluetooth Low Energy) teknolojisi ile kolye gibi cihazlarla bağlantı kurmasını sağlar."
+                    android:textSize="14sp"
+                    android:textColor="@color/text_secondary_color"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Pil Optimizasyonu -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/battery_label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Pil Optimizasyonu"
+                        android:textSize="18sp"
+                        android:textColor="@color/text_primary_color" />
+
+                    <Switch
+                        android:id="@+id/switchBatteryOptimization"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pil optimizasyon ayarlarını devre dışı bırakmak, uygulamanın arka planda çalışmaya devam etmesini sağlar."
+                    android:textSize="14sp"
+                    android:textColor="@color/text_secondary_color"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Doze Modu -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/doze_label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Doze Modu"
+                        android:textSize="18sp"
+                        android:textColor="@color/text_primary_color" />
+
+                    <Switch
+                        android:id="@+id/switchDoze"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Doze modu, cihazın pil ömrünü uzatmak için arka plan işlemlerini sınırlayan bir özelliktir."
+                    android:textSize="14sp"
+                    android:textColor="@color/text_secondary_color"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Bildirim İzni -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/notification_label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Bildirim İzni"
+                        android:textSize="18sp"
+                        android:textColor="@color/text_primary_color" />
+
+                    <Switch
+                        android:id="@+id/switchNotification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bildirim izni, uygulamanın size önemli güncellemeleri ve uyarıları göndermesini sağlar."
+                    android:textSize="14sp"
+                    android:textColor="@color/text_secondary_color"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Dosya İzni -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/file_permission_label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Dosya İzni"
+                        android:textSize="18sp"
+                        android:textColor="@color/text_primary_color" />
+
+                    <Switch
+                        android:id="@+id/switchFilePermission"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fotoğraflarınıza ve videolarınıza erişim izni, profil fotoğrafı yükleme veya medya dosyalarını kullanmak için gereklidir."
+                    android:textSize="14sp"
+                    android:textColor="@color/text_secondary_color"
+                    android:layout_marginBottom="12dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- İlerle Butonu -->
+        <Button
+            android:id="@+id/buttonilerle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/button_color"
+            android:text="İlerle"
+            android:textColor="@color/white"
+            android:padding="12dp"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+</ScrollView>

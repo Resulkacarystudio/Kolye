@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+
+    <color name="bluetooth">#1194AA</color>
+    <color name="zaman">#C9379D</color>
+    <color name="mesaj">#AE7E0F</color>
+    <color name="profil">#5B37B7</color>
+
+    <color name="bluetooth_2">#331194AA</color>
+    <color name="zaman_2">#33C9379D</color>
+    <color name="mesaj_2">#33AE7E0F</color>
+    <color name="profil_2">#335B37B7</color>
+    <color name="colorPressed">#FF0000</color> <!-- Basıldığında kırmızı -->
+    <color name="colorNormal">#008000</color> <!-- Normalde yeşil -->
+
+
+    <color name="red">#FF0000</color>
+    <color name="green">#304A1A</color>
+    <color name="blue">#0000FF</color>
+    <color name="yellow">#FFFF00</color>
+
+        <color name="colorPrimary">#6200EE</color>
+        <color name="colorPrimaryDark">#3700B3</color>
+        <color name="colorAccent">#03DAC5</color>
+    <!-- Primary Colors -->
+    <color name="primaryColor">#6200EE</color>
+    <color name="primaryColorDark">#3700B3</color>
+
+    <!-- Secondary Colors -->
+    <color name="secondaryColor">#03DAC5</color> <!-- İkincil ana renk (Materyal yeşil) -->
+    <color name="secondaryColorDark">#018786</color> <!-- Daha koyu tonu -->
+
+    <!-- Accent Color (Optional) -->
+    <color name="accentColor">#FF4081</color>
+
+    <!-- Text Colors -->
+    <color name="primaryTextColor">#212121</color>
+    <color name="secondaryTextColor">#757575</color>
+
+    <!-- Divider Color -->
+    <color name="dividerColor">#E0E0E0</color>
+    <color name="light_gray">#F5F5F5</color>
+
+    <color name="gray">#BDBDBD</color>
+    <color name="side_nav_background">#FFFFFF</color>
+    <color name="blue_light">#2196F3</color>
+    <color name="gray_light">#BDBDBD</color>
+
+    <color name="primary_color">#6200EE</color> <!-- Ana vurgu rengi (mor tonlarında) -->
+    <color name="primary_dark_color">#3700B3</color> <!-- Daha koyu bir birincil renk -->
+    <color name="primary_light_color">#BB86FC</color> <!-- Daha açık bir birincil renk -->
+
+    <color name="secondary_color">#03DAC6</color> <!-- İkincil vurgu rengi (turkuaz tonlarında) -->
+    <color name="secondary_dark_color">#018786</color> <!-- Daha koyu bir ikincil renk -->
+    <color name="secondary_light_color">#66FFF8</color> <!-- Daha açık bir ikincil renk -->
+    <color name="background_light">#FFFFFF</color> <!-- Açık tema arka plan -->
+    <color name="background_dark">#121212</color> <!-- Koyu tema arka plan -->
+    <color name="card_background">#F5F5F5</color> <!-- Kartlar için nötr bir arka plan -->
+    <color name="divider_color">#E0E0E0</color> <!-- Bölücü çizgiler için -->
+    <color name="text_primary_color">#000000</color> <!-- Birincil metinler (siyah) -->
+    <color name="text_secondary_color">#757575</color> <!-- İkincil metinler (orta gri) -->
+    <color name="text_on_primary">#FFFFFF</color> <!-- Birincil renk üzerinde beyaz metin -->
+    <color name="button_background_color">#6200EE</color> <!-- Ana buton arka plan -->
+    <color name="icon_color">#757575</color> <!-- İkonlar için nötr renk -->
+    <color name="notification_color">#FF9800</color> <!-- Bildirim vurgusu (turuncu tonlarında) -->
+    <color name="error_color">#B00020</color> <!-- Hata durumları için kırmızı -->
+    <color name="success_color">#4CAF50</color> <!-- Başarılı durumlar için yeşil -->
+    <color name="button_color">#6200EE</color> <!-- Buton arka plan rengi -->
+    <color name="button_text_color">#FFFFFF</color> <!-- Buton metni rengi -->
+    <color name="background_color">#F5F5F5</color> <!-- Ana arka plan rengi -->
+    <color name="card_background_color">#88FFFFFF</color> <!-- CardView arka plan rengi -->
+    <color name="title_text_color">#212121</color> <!-- Başlık metni rengi -->
+    <color name="switch_active_color">#03DAC5</color> <!-- Switch etkin durumu için renk -->
+    <color name="switch_inactive_color">#BDBDBD</color> <!-- Switch devre dışı durumu için renk -->
+    <color name="accent_color">#FF9800</color> <!-- Vurgu rengi -->
+
+    <color name="warning_color">#FFC107</color> <!-- Uyarı rengi -->
+
+
+    <!-- Arkaplan Renkleri -->
+    <color name="background_color_light">#F9F9F9</color> <!-- Açık Tema Arkaplan -->
+    <color name="background_color_dark">#121212</color> <!-- Koyu Tema Arkaplan -->
+
+    <!-- Metin Renkleri -->
+    <color name="primary_text_color">#333333</color> <!-- Ana Metin Rengi -->
+    <color name="secondary_text_color">#666666</color> <!-- İkincil Metin Rengi -->
+
+    <!-- Buton Renkleri -->
+    <color name="button_primary_color">#6200EE</color> <!-- Ana Buton Rengi -->
+    <color name="button_secondary_color">#03DAC5</color> <!-- İkincil Buton Rengi -->
+    <color name="button_disabled_color">#D1D1D1</color> <!-- Buton Kapalı Renk -->
+
+    <!-- Kart Renkleri -->
+    <color name="card_border_color">#E0E0E0</color> <!-- Kart Çerçeve Rengi -->
+
+    <!-- EditText ve İkon Renkleri -->
+    <color name="edittext_hint_color">#AAAAAA</color> <!-- EditText İpucu Rengi -->
+    <color name="icon_tint_color">#757575</color> <!-- İkon Rengi -->
+
+    <!-- Diğer Renkler -->
+    <color name="progress_bar_color">#6200EE</color> <!-- ProgressBar Rengi -->
+    <color name="button_primary">#6200EE</color> <!-- Varsayılan buton rengi -->
+    <color name="button_primary_pressed">#3700B3</color> <!-- Basılı durumdaki buton rengi -->
+    <color name="button_secondary">#03DAC5</color> <!-- Varsayılan buton rengi -->
+    <color name="button_secondary_pressed">#018786</color> <!-- Basılı durumdaki buton rengi -->
+
+    <color name="background_gray">#F5F5F5</color> <!-- Arka plan -->
+    <color name="card_opacity_white">#88FDFDFD</color> <!-- CardView arka plan -->
+    <color name="primary_text_color_dark">#212121</color> <!-- Koyu yazı rengi -->
+    <color name="link_text_color">#1976D2</color> <!-- Şifremi Unuttum bağlantı rengi -->
+
+    <color name="background_blue">#2196F3</color> <!-- Bu renk mat bir mavi tonudur -->
+    <color name="card_opacity_blue">#802196F3</color> <!-- Mavi, %50 opaklık -->
+
+
+    <color name="primary">#6200EE</color>
+    <color name="primaryVariant">#3700B3</color>
+    <color name="secondary">#03DAC6</color>
+    <color name="white">#FFFFFF</color>
+
+
+
+
+
+
+
+
+</resources>

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_tasarim_blue"
+
+    tools:context=".FirstPage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="0dp">
+
+    <!-- Baykuş Görseli -->
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/bgsincap2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        android:contentDescription="Logo" />
+
+    <!-- Hoşgeldiniz Metni -->
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ᴛᴜʀǫᴜᴏɪsᴇ"
+        android:textSize="30sp"
+        android:textColor="@color/background_color_dark"
+        android:padding="10dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/iv_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- E-posta Giriş Alanı -->
+    <EditText
+        android:id="@+id/firstPage_kullaniciadi"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="E-posta"
+        android:textColorHint="@color/icon_color"
+        android:drawableStart="@drawable/email_asset1"
+        android:drawablePadding="8dp"
+        android:padding="12dp"
+        android:background="@drawable/edittext_background1"
+        android:inputType="textEmailAddress"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_welcome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:textStyle="bold"
+
+        android:layout_marginTop="24dp" />
+
+    <!-- Şifre Giriş Alanı -->
+    <EditText
+        android:id="@+id/firstPage_kullanicisifre"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="Şifre"
+        android:textColorHint="@color/icon_color"
+        android:drawableLeft="@drawable/sifre_asset1"
+        android:drawableRight="@drawable/eyes_asset2"
+        android:drawablePadding="8dp"
+        android:padding="12dp"
+
+
+        android:background="@drawable/edittext_background1"
+        android:inputType="textPassword"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/firstPage_kullaniciadi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="16dp" />
+
+    <!-- Şifremi Unuttum -->
+
+    <!-- Giriş Yap Butonu -->
+
+    <TextView
+        android:id="@+id/sifremiUnuttum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="Şifremi Unuttum?"
+        android:textColor="#666666"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/firstPage_kullanicisifre" />
+
+    <com.google.android.material.button.MaterialButton
+
+        android:id="@+id/firstPage_login_bt"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="Giriş Yap"
+        android:textColor="#FFFFFF"
+        app:cornerRadius="12dp"
+        android:textSize="16sp"
+        android:backgroundTint="#007BFF"
+        app:layout_constraintTop_toBottomOf="@id/sifremiUnuttum"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="16dp" />
+
+    <!-- "Ya da" Metni -->
+    <TextView
+        android:id="@+id/tv_or"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ya Da"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        app:layout_constraintTop_toBottomOf="@id/firstPage_login_bt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Google ve Facebook Butonları -->
+    <LinearLayout
+        android:id="@+id/sosyal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_or"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Google Butonu -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_googlegiris"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="Google"
+            android:textStyle="bold"
+            app:cornerRadius="10dp"
+            android:textColor="#000000"
+            android:textSize="11sp"
+            android:backgroundTint="#FFFFFF"
+            android:drawableLeft="@drawable/google_asset"
+            android:drawablePadding="8dp"
+            android:layout_marginEnd="8dp" />
+
+        <!-- Facebook Butonu -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_facebook"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:cornerRadius="12dp"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:text="Facebook"
+            android:textColor="#000000"
+            android:textSize="11sp"
+            android:backgroundTint="#FFFFFF"
+            android:drawableLeft="@drawable/facebook_asset"
+            android:drawablePadding="8dp"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- Hesabın Yok mu? -->
+    <TextView
+        android:id="@+id/tv_register_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hesabın yok mu? "
+        android:textSize="14sp"
+        android:textColor="#666666"
+        app:layout_constraintTop_toBottomOf="@id/sosyal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/first_register_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hemen kayıt ol!"
+        android:textSize="14sp"
+        android:textColor="#032040"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tv_register_action"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <!-- Yarı Şeffaf Katman (Kullanıcı etkileşimini engelleyecek) -->
+    <FrameLayout
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="#88000000"
+        android:visibility="gone" />
+
+</FrameLayout>

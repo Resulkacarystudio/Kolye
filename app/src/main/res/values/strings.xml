@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Green Love</string>
+    <string name="kullanici_adi_kurallar">
+        *Kullanıcı Adı ı,ü,ö,ğ,ç Gibi Harfler İçermemelidir.\n
+        *Kullanıcı Adı Harfler ve Rakamlardan Oluşabilir.\n
+        *Kullanıcı Adı "_" İçerebilir.\n
+        *Kullanıcı Adı Benzersiz Olmalıdır.
+
+    </string>
+    <string name="kullanici_sifre_kurallar">
+        *Kullanıcı Şifresi ı,ü,ö,ğ,ç Gibi Harfler İçermemelidir.\n*Kullanıcı Şifresi Harfler ve Rakamlardan Oluşmalıdır.\n*Kullanıcı Şifresi En Az 8 Karekterli Olmalıdır.\n*Kullanıcı Şifresi Rakam İçermelidir.\n
+    </string>
+    <string name="kullanici_email_kurallar">*Lütfen Geçerli Bir Mail Adresi Giriniz.\n*Mail Adresi example@example.com Gibi Olmalıdır.\n
+    </string>
+    <string name="kullanici_telefonno_kurallar">*Lütfen Geçerli Bir Telefon Numarası Giriniz.\n*Telefon Numarası 11 Haneli Olmalıdır.\n*Telefon Numarası Sadece Rakamlardan Oluşmalıdır.\n
+</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="kullanici_id_text">Bu şifre size özeldir. Yalnızca kolyenizin diğer eşinin sahibiyle bu şifreyi paylaşın ve onun da bu şifreyi kaydetmesini isteyin. Kolye çiftleri bu şifreler sayesinde haberleşir.\n\n1)Kendi şifrenizi kolyenizin eşinin sahibiyle paylaşınız.(1.Alan)\n2)Kolye eşinizin sizinle paylaştığı şifreyi ilgili alana yapıştırıp "Kaydet" butonuna basınız.(2.Alan)\n3)Daha sonra Bluetooth bağlantısını başarıyla gerçekleştirip kullanmaya başlayabilirsiniz.</string>
+    <string name="kullanici_id_text1">KOLYENİZİ\nEŞLEŞTİRMEK\nİÇİN İLERLEYİNİZ.</string>
+
+    <string name="default_web_client_id">650450753089-rf8alvjf0dbheu7l7e1qvuf81qjreb9q.apps.googleusercontent.com</string>
+</resources>
